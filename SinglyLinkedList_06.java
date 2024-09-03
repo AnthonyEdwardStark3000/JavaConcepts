@@ -8,6 +8,14 @@ public class SinglyLinkedList_06{
             this.next = null;
         }
     }
+    public void display(){
+        ListNode current = head;
+        while(current!=null){
+            System.out.print(current.data+"-->");
+            current = current.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args){
         SinglyLinkedList_06 sll = new SinglyLinkedList_06();
         sll.head = new ListNode(10);
@@ -18,5 +26,6 @@ public class SinglyLinkedList_06{
         sll.head.next = second;
         second.next = third;
         third.next = fourth;
+        sll.display();
     }
 }
